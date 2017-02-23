@@ -1,0 +1,29 @@
+{
+  "name": "simple-api-server",
+  "version": "0.1.0",
+  "description": "Simple REST API server made with JavaScript",
+  "main": "server/main.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node server/main.js"
+  },
+  "keywords": [
+    "REST",
+    "API",
+    "Server",
+    "JavaScript",
+    "Node.js",
+    "Nodejs"
+  ],
+  "author": "Jose Antonio Rosa dos Santos Junior",
+  "license": "MIT",
+  "dependencies": {
+    "blueimp-md5": "^2.6.0",
+    "jsonwebtoken": "^7.3.0",
+    "mysql": "^2.13.0"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0",
+    "mockery": "^2.0.0"
+  }
+}
