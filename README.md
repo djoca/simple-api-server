@@ -49,21 +49,53 @@ You can create other folders inside the `/functions`  folder if you need. These 
 
 ## Authentication
 
-To create an authentication method, you must create a function inside the `/functions`  folder and register it with the authentication engine.
+To create an authentication method, you must create a function inside the `/functions`  folder and register it with the security engine.
 
 The authentication method must be a function that expects to receive 3 parameters:
 
- - login: a string containing the user login. password: a string
- - containing the user password. callback: a callback function to the
- - authentication engine.
+ - login: a string containing the user login. 
+ - password: a string containing the user password. 
+ - callback: a callback function to the security engine.
+
+Example:
+
+    var dumbAuthentication = function(login, password, callback) {
+    ...
+    }
 
 The callback function has 2 parameters:
-- error: set only if an error occured.
+
+- error: set only if an error occurred.
 - authentication_ok: true if authentication succeeds, false otherwise.
 
-Simple API Server comes with a default authentication method, that should be used only for development. This method returns true if the login and password are equals.
+Example:
+
+    callback(null, login === password);
+
+To register the authentication function, use the code bellow:
+   
+
+    security.register(dumbAuthentication);
+
+
+
+> Simple API Server comes with a default authentication method, that should be used **only for development**. This method returns true if the login and password are equals.
 
 Simple API Server uses JSON Web Tokens to create and decode tokens.
+
+## Testing
+
+To run the tests, type the command bellow:
+
+    npm test
+
+## Contributing
+
+This project is far from done. If you found it useful, you are welcome to contribute.
+
+Please, feel free to report any bugs, suggestions or ask questions by [opening an issue](http://github.com/djoca/simple-api-server/issues). 
+
+If you'd like to contribute with development, pull requests are also welcomed.
 
 ## License
 MIT
