@@ -18,7 +18,6 @@
   "author": "Jose Antonio Rosa dos Santos Junior",
   "license": "MIT",
   "dependencies": {
-    "blueimp-md5": "^2.6.0",
     "jsonwebtoken": "^7.3.0"
   },
   "devDependencies": {
