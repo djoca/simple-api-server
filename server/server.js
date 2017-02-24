@@ -1,13 +1,3 @@
-//TODO Better logging
-//TODO Write README
-//TODO Better authentication example
-//TODO TESTS!!
-//TODO Central database handling? Or any other resource handling
-//TODO Better js imports
-//TODO Change routes.register call to routing.register on all files
-//FIXME Padronizar mensagens JSON
-//TODO support POST and other methods
-
 var http = require("http");
 var url = require("url");
 
